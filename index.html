@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucie Arnulf — Thérapie en Dynamique Émotionnelle</title>
-<meta name="description" content="Lucie Arnulf, thérapeute en Dynamique Émotionnelle Exprimée. Libérer et transformer ses émotions. Paris 16ᵉ et à distance.">
+<title>Lucie Arnulf — Thérapie en Dynamique Émotionnelle Exprimée</title>
+<meta name="description" content="Lucie Arnulf, thérapeute à Paris 16ᵉ. Dynamique Émotionnelle Exprimée — une approche humaniste pour libérer et transformer ses émotions. Adultes, adolescents, enfants, couples.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Hallmark · route: custom (bespoke) · idea: "emotional current — a living canvas that breathes with the page"
+/* Hallmark · route: custom (bespoke) · idea: "emotional current meets editorial depth"
  * paper: oklch(97.5% 0.005 85) · accent: oklch(52% 0.15 20) · display: Cormorant Garamond · body: Inter */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 */
 
 :root {
   --color-paper: oklch(97.5% 0.005 85);
   --color-paper-warm: oklch(93% 0.010 80);
-  --color-ink: oklch(15% 0.006 78);
-  --color-ink-soft: oklch(38% 0.008 78);
-  --color-ink-muted: oklch(55% 0.006 76);
+  --color-ink: oklch(14% 0.005 78);
+  --color-ink-soft: oklch(36% 0.007 78);
+  --color-ink-muted: oklch(54% 0.006 76);
   --color-accent: oklch(52% 0.15 20);
   --color-accent-soft: oklch(72% 0.10 22);
   --color-surface: #fff;
-  --color-surface-warm: oklch(95.5% 0.007 82);
-  --color-rule: oklch(18% 0.005 78 / 0.07);
+  --color-surface-warm: oklch(95.5% 0.006 82);
+  --color-rule: oklch(18% 0.004 78 / 0.08);
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -38,34 +38,31 @@ body {
 
 /* ---- Emotional Current Canvas ---- */
 #emotionalCanvas {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  opacity: 0.85;
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 1;
 }
 
 /* ---- Nav ---- */
 nav {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
   padding: 16px 32px; display: flex; align-items: center; justify-content: space-between;
-  transition: background 0.5s ease, box-shadow 0.5s ease, padding 0.4s cubic-bezier(0.16,1,0.3,1);
+  transition: background 0.5s, box-shadow 0.5s, padding 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 nav.scrolled {
   background: oklch(97.5% 0.005 85 / 0.88);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 oklch(18% 0.005 78 / 0.06), 0 8px 32px oklch(0% 0 0 / 0.03);
+  box-shadow: 0 1px 0 var(--color-rule), 0 8px 32px oklch(0% 0 0 / 0.03);
   padding-top: 12px; padding-bottom: 12px;
 }
-
 .nav-brand {
   font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
   color: var(--color-ink); text-decoration: none; letter-spacing: -0.01em;
   transition: font-size 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 nav.scrolled .nav-brand { font-size: 1.15rem; }
-
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .nav-links a {
   font-size: 0.875rem; font-weight: 500; color: var(--color-ink-soft); text-decoration: none;
-  position: relative; padding: 4px 0; transition: color 0.3s ease;
+  position: relative; padding: 4px 0; transition: color 0.3s;
 }
 .nav-links a::after {
   content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1.5px;
@@ -74,11 +71,10 @@ nav.scrolled .nav-brand { font-size: 1.15rem; }
 }
 .nav-links a:hover { color: var(--color-ink); }
 .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-
 .nav-cta {
   background: var(--color-accent); color: #fff !important;
   padding: 10px 20px !important; border-radius: 6px;
-  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1) !important;
+  transition: background 0.3s, transform 0.3s cubic-bezier(0.16,1,0.3,1) !important;
 }
 .nav-cta::after { display: none !important; }
 .nav-cta:hover { background: oklch(44% 0.15 20); transform: translateY(-1px); }
@@ -94,36 +90,27 @@ nav.scrolled .nav-brand { font-size: 1.15rem; }
 .hero-eyebrow {
   font-family: var(--font-mono); font-size: 0.688rem; font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent);
-  margin-bottom: 28px; opacity: 0; animation: fadeInUp 1s 0.3s forwards;
+  margin-bottom: 28px; opacity: 0; animation: fadeUp 1s 0.3s forwards;
 }
 
 .hero h1 {
   font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 6.5rem);
-  font-weight: 500; line-height: 1.03; color: var(--color-ink);
-  margin-bottom: 28px; letter-spacing: -0.025em;
+  font-weight: 500; line-height: 1.03; margin-bottom: 28px; letter-spacing: -0.025em;
 }
-
-.hero h1 .line {
-  display: block; opacity: 0; animation: fadeInUp 1s forwards;
-}
+.hero h1 .line { display: block; opacity: 0; animation: fadeUp 1s forwards; }
 .hero h1 .line:nth-child(1) { animation-delay: 0.5s; }
 .hero h1 .line:nth-child(2) { animation-delay: 0.7s; }
 .hero h1 .line:nth-child(3) { animation-delay: 0.9s; }
-
-.hero h1 .accent-word { color: var(--color-accent); font-style: italic; font-weight: 400; }
+.hero h1 .accent { color: var(--color-accent); font-style: italic; font-weight: 400; }
 
 .hero-lede {
   font-size: 1.2rem; line-height: 1.7; color: var(--color-ink-soft);
   max-width: 560px; margin-bottom: 36px;
-  opacity: 0; animation: fadeInUp 1s 1.1s forwards;
+  opacity: 0; animation: fadeUp 1s 1.1s forwards;
 }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 1s 1.3s forwards; }
 
-.hero-actions {
-  display: flex; gap: 16px; flex-wrap: wrap;
-  opacity: 0; animation: fadeInUp 1s 1.3s forwards;
-}
-
-@keyframes fadeInUp {
+@keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
@@ -132,9 +119,9 @@ nav.scrolled .nav-brand { font-size: 1.15rem; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-body); font-size: 0.938rem; font-weight: 500;
-  padding: 15px 32px; background: var(--color-accent); color: #fff;
+  padding: 14px 30px; background: var(--color-accent); color: #fff;
   border: none; border-radius: 6px; cursor: pointer; text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease;
+  transition: background 0.3s, transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
   box-shadow: 0 2px 12px oklch(52% 0.15 20 / 0.2);
 }
 .btn-primary:hover {
@@ -145,19 +132,17 @@ nav.scrolled .nav-brand { font-size: 1.15rem; }
 
 .btn-ghost {
   display: inline-flex; align-items: center; font-family: var(--font-body);
-  font-size: 0.938rem; font-weight: 500; padding: 15px 32px;
+  font-size: 0.938rem; font-weight: 500; padding: 14px 30px;
   background: transparent; color: var(--color-ink-soft);
-  border: 1px solid var(--color-rule); border-radius: 6px;
-  cursor: pointer; text-decoration: none;
-  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1);
+  border: 1px solid var(--color-rule); border-radius: 6px; cursor: pointer; text-decoration: none;
+  transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 .btn-ghost:hover {
   border-color: var(--color-accent); color: var(--color-accent);
   background: oklch(72% 0.10 22 / 0.1); transform: translateY(-2px);
 }
-.btn-ghost:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 
-/* ---- Scroll Reveal ---- */
+/* ---- Reveal ---- */
 .reveal {
   opacity: 0; transform: translateY(28px);
   transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
@@ -165,81 +150,107 @@ nav.scrolled .nav-brand { font-size: 1.15rem; }
 .reveal.is-in { opacity: 1; transform: translateY(0); }
 
 /* ---- Sections ---- */
-section { padding: 120px 32px; position: relative; z-index: 1; }
+section { padding: 112px 32px; position: relative; z-index: 1; }
 
 .section-label {
   font-family: var(--font-mono); font-size: 0.688rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.13em; color: var(--color-accent);
-  margin-bottom: 16px;
+  text-transform: uppercase; letter-spacing: 0.13em; color: var(--color-accent); margin-bottom: 16px;
 }
-
 .section-heading {
-  font-family: var(--font-display); font-size: clamp(2.4rem, 4.8vw, 3.5rem);
-  font-weight: 500; line-height: 1.1; color: var(--color-ink);
-  margin-bottom: 24px; letter-spacing: -0.02em;
+  font-family: var(--font-display); font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  font-weight: 500; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em;
+}
+.section-text { font-size: 1.063rem; line-height: 1.7; color: var(--color-ink-soft); max-width: 600px; }
+
+/* ---- Image Blocks ---- */
+.img-full {
+  width: 100%; max-height: 500px; object-fit: cover; border-radius: 14px;
+  border: 1px solid var(--color-rule);
 }
 
-.section-text { font-size: 1.063rem; line-height: 1.7; color: var(--color-ink-soft); max-width: 600px; }
-.section-text + .section-text { margin-top: 12px; }
+.img-card {
+  width: 100%; border-radius: 12px;
+  border: 1px solid var(--color-rule);
+}
 
 /* ---- Approach ---- */
 .approach { background: var(--color-surface-warm); }
-
 .approach-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
-  margin-top: 56px; align-items: start;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 56px; align-items: center;
 }
 
-.approach-quote-block {
-  background: var(--color-surface); border: 1px solid var(--color-rule);
-  border-radius: 14px; padding: 48px; display: flex; flex-direction: column; justify-content: center;
-  min-height: 400px; text-align: center;
+.approach-img-wrap {
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--color-rule);
+  aspect-ratio: 4/5;
 }
 
-.approach-quote-block .mark {
-  font-family: var(--font-display); font-size: 5rem; font-weight: 400; font-style: italic;
-  color: var(--color-accent); opacity: 0.2; line-height: 1; margin-bottom: 16px;
-}
+.approach-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
-.approach-quote-block blockquote {
-  font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; font-style: italic;
-  line-height: 1.5; color: var(--color-ink);
+.approach-text h3 {
+  font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; margin-bottom: 16px;
 }
+.approach-text p { font-size: 0.938rem; line-height: 1.7; color: var(--color-ink-soft); }
+.approach-text p + p { margin-top: 12px; }
 
-.approach-quote-block cite {
-  display: block; margin-top: 16px; font-family: var(--font-mono);
-  font-size: 0.688rem; font-style: normal; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--color-ink-muted);
-}
-
-.approach-detail h3 {
-  font-family: var(--font-display); font-size: 1.6rem; font-weight: 500;
-  color: var(--color-ink); margin-bottom: 16px;
-}
-.approach-detail p { font-size: 0.938rem; line-height: 1.7; color: var(--color-ink-soft); }
-.approach-detail p + p { margin-top: 12px; }
-
-.testimonial-inline {
-  margin-top: 28px; padding: 20px 24px;
+.quote-inline {
+  margin-top: 24px; padding: 20px 24px;
   background: var(--color-surface); border-left: 2px solid var(--color-accent);
   border-radius: 0 8px 8px 0;
 }
-.testimonial-inline p {
-  font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--color-ink);
+.quote-inline p { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--color-ink); }
+.quote-inline span {
+  display: block; margin-top: 6px; font-family: var(--font-mono); font-size: 0.688rem;
+  font-style: normal; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-muted);
 }
-.testimonial-inline span {
-  display: block; margin-top: 6px; font-family: var(--font-mono);
-  font-size: 0.688rem; font-style: normal; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--color-ink-muted);
+
+/* ---- Three-pillar grid ---- */
+.pillar-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px;
+}
+
+.pillar-card {
+  background: var(--color-surface); border: 1px solid var(--color-rule);
+  border-radius: 12px; padding: 40px 28px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px oklch(0% 0 0 / 0.05); }
+
+.pillar-card h3 {
+  font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; margin-bottom: 12px;
+}
+.pillar-card p { font-size: 0.875rem; line-height: 1.6; color: var(--color-ink-muted); }
+.pillar-card .pillar-link {
+  display: inline-block; margin-top: 16px; font-size: 0.813rem; font-weight: 500;
+  color: var(--color-accent); text-decoration: none;
+  transition: opacity 0.2s;
+}
+.pillar-card .pillar-link:hover { opacity: 0.7; }
+
+/* ---- Articles grid ---- */
+.articles-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px;
+}
+
+.article-card {
+  background: var(--color-surface); border: 1px solid var(--color-rule);
+  border-radius: 10px; padding: 24px 20px;
+  transition: border-color 0.3s, transform 0.3s ease;
+}
+.article-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+
+.article-card .cat {
+  font-family: var(--font-mono); font-size: 0.625rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 8px; display: block;
+}
+.article-card h4 {
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 500;
+  line-height: 1.25; margin-bottom: 4px;
 }
 
 /* ---- Stats ---- */
 .stats-strip {
   background: var(--color-ink); color: #fff; padding: 64px 32px;
-  display: flex; justify-content: center; gap: 96px; flex-wrap: wrap;
-  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 96px; flex-wrap: wrap; position: relative; z-index: 1;
 }
-
 .stat-item { text-align: center; }
 .stat-number {
   font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4rem);
@@ -257,66 +268,48 @@ section { padding: 120px 32px; position: relative; z-index: 1; }
 
 .service-card {
   background: var(--color-surface); border: 1px solid var(--color-rule);
-  border-radius: 12px; padding: 36px 28px;
-  transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
+  border-radius: 12px; padding: 36px 28px; transition: border-color 0.4s, transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s;
   position: relative; overflow: hidden;
 }
-
 .service-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
   background: var(--color-accent); transform: scaleX(0); transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
 }
-
 .service-card:hover {
-  border-color: oklch(52% 0.15 20 / 0.2);
-  transform: translateY(-6px); box-shadow: 0 16px 40px oklch(0% 0 0 / 0.06);
+  border-color: oklch(52% 0.15 20 / 0.2); transform: translateY(-6px);
+  box-shadow: 0 16px 40px oklch(0% 0 0 / 0.06);
 }
 .service-card:hover::before { transform: scaleX(1); }
-
-.service-card .card-num {
-  font-family: var(--font-mono); font-size: 0.688rem; font-weight: 500;
-  color: var(--color-accent); text-transform: uppercase;
-  letter-spacing: 0.1em; margin-bottom: 14px; display: block;
-}
-.service-card h3 {
-  font-family: var(--font-display); font-size: 1.35rem; font-weight: 500;
-  color: var(--color-ink); margin-bottom: 6px; line-height: 1.2;
-}
+.service-card .card-num { font-family: var(--font-mono); font-size: 0.688rem; font-weight: 500; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; display: block; }
+.service-card h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; margin-bottom: 6px; line-height: 1.2; }
 .service-card p { font-size: 0.875rem; line-height: 1.6; color: var(--color-ink-muted); }
 
 /* ---- Quote ---- */
-.quote-divider { padding: 120px 32px; text-align: center; position: relative; z-index: 1; }
-.quote-divider blockquote {
+.quote-section { padding: 112px 32px; text-align: center; position: relative; z-index: 1; background: var(--color-paper-warm); }
+
+.quote-section blockquote {
   font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 400; font-style: italic; line-height: 1.4;
-  color: var(--color-ink); max-width: 700px; margin: 0 auto;
+  max-width: 700px; margin: 0 auto;
 }
-.quote-divider blockquote::before {
+.quote-section blockquote::before {
   content: ''; display: block; width: 32px; height: 2px;
   background: var(--color-accent); margin: 0 auto 32px;
 }
-.quote-divider cite {
-  display: block; margin-top: 24px; font-family: var(--font-mono);
-  font-size: 0.688rem; font-style: normal; text-transform: uppercase;
-  letter-spacing: 0.13em; color: var(--color-ink-muted);
+.quote-section cite {
+  display: block; margin-top: 24px; font-family: var(--font-mono); font-size: 0.688rem;
+  font-style: normal; text-transform: uppercase; letter-spacing: 0.13em; color: var(--color-ink-muted);
 }
 
 /* ---- Contact ---- */
-.contact-section { background: var(--color-surface-warm); }
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 56px;
-}
+.contact { background: var(--color-surface-warm); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; }
 
 .contact-card {
-  background: var(--color-surface); border: 1px solid var(--color-rule);
-  border-radius: 14px; padding: 44px;
+  background: var(--color-surface); border: 1px solid var(--color-rule); border-radius: 14px; padding: 44px;
 }
-.contact-card h3 {
-  font-family: var(--font-display); font-size: 1.7rem; font-weight: 500;
-  color: var(--color-ink); margin-bottom: 28px;
-}
-
+.contact-card h3 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 500; margin-bottom: 28px; }
 .contact-row {
   display: flex; flex-direction: column; gap: 3px;
   margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--color-rule);
@@ -329,14 +322,10 @@ section { padding: 120px 32px; position: relative; z-index: 1; }
 .contact-row .value { font-size: 1.063rem; color: var(--color-ink); text-decoration: none; transition: color 0.2s; }
 .contact-row a.value:hover { color: var(--color-accent); }
 
-.contact-dark {
-  background: var(--color-ink); border-radius: 14px; padding: 44px;
-  color: #fff; display: flex; flex-direction: column; justify-content: space-between;
+.contact-img-wrap {
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--color-rule); aspect-ratio: 4/3;
 }
-.contact-dark h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: 14px; }
-.contact-dark p {
-  font-size: 0.938rem; line-height: 1.7; color: oklch(96% 0.005 85 / 0.65); margin-bottom: 28px;
-}
+.contact-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ---- Footer ---- */
 footer {
@@ -345,14 +334,15 @@ footer {
   flex-wrap: wrap; gap: 12px; position: relative; z-index: 1;
   font-size: 0.813rem; color: var(--color-ink-muted);
 }
-footer a { color: var(--color-ink-soft); text-decoration: none; transition: color 0.2s; }
+footer a { color: var(--color-ink-soft); text-decoration: none; }
 footer a:hover { color: var(--color-accent); }
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
-  .approach-grid { grid-template-columns: 1fr; gap: 48px; }
+  .approach-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .pillar-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .stats-strip { gap: 48px; }
 }
 
@@ -362,15 +352,13 @@ footer a:hover { color: var(--color-accent); }
   .hero { min-height: auto; padding: 130px 16px 72px; }
   .hero h1 { font-size: 2.5rem; }
   section { padding: 72px 16px; }
+  .articles-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
-  .quote-divider { padding: 72px 16px; }
+  .quote-section { padding: 72px 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   #emotionalCanvas { display: none; }
   .reveal { opacity: 1; transform: none; }
 }
@@ -387,7 +375,9 @@ footer a:hover { color: var(--color-accent); }
   <a href="#" class="nav-brand">Lucie Arnulf</a>
   <ul class="nav-links">
     <li><a href="#approche">Approche</a></li>
-    <li><a href="#services">Séances</a></li>
+    <li><a href="#concepts">Concepts</a></li>
+    <li><a href="#troubles">Troubles</a></li>
+    <li><a href="#articles">Articles</a></li>
     <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
   </ul>
 </nav>
@@ -397,10 +387,10 @@ footer a:hover { color: var(--color-accent); }
     <p class="hero-eyebrow">Thérapeute · Paris 16ᵉ</p>
     <h1>
       <span class="line">La thérapie</span>
-      <span class="line">qui <span class="accent-word">traverse</span></span>
+      <span class="line">qui <span class="accent">traverse</span></span>
       <span class="line">l'émotion</span>
     </h1>
-    <p class="hero-lede">La Dynamique Émotionnelle Exprimée ne cherche pas à analyser vos émotions. Elle vous aide à les éprouver, les traverser, et les transformer — pour retrouver l'accès à vous-même.</p>
+    <p class="hero-lede">La Dynamique Émotionnelle Exprimée est une approche humaniste fondée par le Dr Étienne Jalenques. Elle ne cherche pas à analyser vos émotions — elle vous aide à les éprouver, les traverser, et les transformer.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Prendre rendez-vous →</a>
       <a href="#approche" class="btn-ghost">Découvrir l'approche</a>
@@ -410,20 +400,18 @@ footer a:hover { color: var(--color-accent); }
 
 <section id="approche" class="approach">
   <p class="section-label reveal">L'approche</p>
-  <h2 class="section-heading reveal">Une thérapie qui agit<br>en profondeur</h2>
-  <p class="section-text reveal">Fondée par le Dr Étienne Jalenques, la Dynamique Émotionnelle Exprimée s'inscrit dans la psychologie humaniste. Elle considère l'être humain dans sa globalité — corps, psyché, histoire.</p>
+  <h2 class="section-heading reveal">La Dynamique Émotionnelle<br>Exprimée</h2>
 
   <div class="approach-grid">
-    <div class="approach-quote-block reveal">
-      <div class="mark">«</div>
-      <blockquote>Le savoir commence par les sentiments, par l'expérience. Le savoir commence par l'Amour.</blockquote>
-      <cite>Léonard de Vinci</cite>
+    <div class="approach-img-wrap reveal">
+      <img src="https://raw.githubusercontent.com/notitiacorp-design/lucie-arnulf/master/Douce%20connexion%20dans%20la%20lumi%C3%A8re%20chaud.png" alt="Connexion douce dans la lumière" loading="lazy">
     </div>
-    <div class="approach-detail reveal">
-      <h3>Traverser l'émotion pour se retrouver</h3>
-      <p>Il ne s'agit pas de revenir au passé pour l'analyser, mais de travailler à partir de l'expérience actuelle. En éprouvant pleinement l'émotion, le patient retrouve l'accès à lui-même.</p>
-      <p>La DEE a fait ses preuves auprès de milliers de patients. Elle ne modifie pas les événements du passé — mais la manière dont ils continuent d'être vécus dans le présent.</p>
-      <div class="testimonial-inline">
+    <div class="approach-text reveal">
+      <h3>Une méthode puissante et transformatrice</h3>
+      <p>Fondée dans les années 1970 par le Dr Étienne Jalenques, psychiatre français, la Dynamique Émotionnelle Exprimée s'inscrit dans la mouvance de la psychologie humaniste.</p>
+      <p>Puissante et profondément transformatrice, cette approche utilise l'expression des affects comme voie privilégiée de libération et de guérison. Elle s'appuie sur le ressenti émotionnel — le « sentir » — plutôt que sur la compréhension intellectuelle, souvent défensive ou coupée du vécu.</p>
+      <p>C'est en traversant l'émotion, en l'éprouvant pleinement, que le sujet retrouve l'accès à lui-même. La DEE a fait ses preuves auprès de milliers de patients, en groupe comme en séance individuelle.</p>
+      <div class="quote-inline">
         <p>« On ne comprend pas toujours ce qui se passe, mais dans le quotidien, ça bouge. »</p>
         <span>Une patiente</span>
       </div>
@@ -438,27 +426,97 @@ footer a:hover { color: var(--color-accent); }
   <div class="stat-item reveal"><div class="stat-number">À distance</div><div class="stat-label">visio & téléphone</div></div>
 </div>
 
-<section id="services">
-  <p class="section-label reveal">Les séances</p>
-  <h2 class="section-heading reveal">Pour qui, comment</h2>
-  <p class="section-text reveal">Chaque accompagnement est unique. Je reçois en cabinet à Paris 16ᵉ et à distance, en séances individuelles ou en groupe.</p>
+<section id="concepts">
+  <p class="section-label reveal">Les concepts</p>
+  <h2 class="section-heading reveal">Concepts thérapeutiques</h2>
+  <p class="section-text reveal">La Dynamique Émotionnelle s'appuie sur des concepts cliniques solides, issus de la psychologie humaniste et de la psychanalyse contemporaine.</p>
 
-  <div class="services-grid">
-    <div class="service-card reveal"><span class="card-num">01</span><h3>Adultes</h3><p>Séances individuelles pour traverser angoisses, blocages, dépressions, et retrouver l'équilibre intérieur.</p></div>
-    <div class="service-card reveal"><span class="card-num">02</span><h3>Couples</h3><p>Un espace pour renouer le dialogue et retrouver une relation vivante.</p></div>
-    <div class="service-card reveal"><span class="card-num">03</span><h3>Adolescents & Enfants</h3><p>Un accompagnement adapté aux plus jeunes, à l'écoute de leur sensibilité.</p></div>
-    <div class="service-card reveal"><span class="card-num">04</span><h3>À distance</h3><p>Par téléphone ou visioconférence. Même qualité d'écoute qu'en présentiel.</p></div>
+  <div class="pillar-grid">
+    <div class="pillar-card reveal">
+      <h3>L'affect au cœur du processus</h3>
+      <p>L'approche affective du Dr Jalenques place l'émotion au centre du travail thérapeutique. Il ne s'agit pas d'analyser mais de ressentir — pour restaurer l'amour de soi.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <h3>La mantrathérapie</h3>
+      <p>Outil puissant de la Dynamique Émotionnelle, la mantrathérapie utilise la répétition de phrases incarnées pour dénouer les fixations affectives et libérer les émotions bloquées.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <h3>Le faux self</h3>
+      <p>Quand s'adapter nous fait perdre notre identité. Le travail thérapeutique permet de déposer ce masque pour retrouver son être authentique.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <h3>L'espace transitionnel</h3>
+      <p>Winnicott a montré l'importance de cet espace intermédiaire où se joue la créativité et la capacité à être seul — un pilier du travail en Dynamique Émotionnelle.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <h3>La honte enfouie</h3>
+      <p>Une blessure invisible qui façonne nos comportements. La thérapie permet de la reconnaître, de l'accueillir et de s'en libérer.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <h3>L'archaïque et l'infantile</h3>
+      <p>Les traces laissées par les expériences précoces continuent d'agir en nous. Le travail sur ces couches profondes ouvre la voie à une transformation durable.</p>
+    </div>
   </div>
 </section>
 
-<div class="quote-divider">
+<section id="troubles" style="background:var(--color-surface-warm)">
+  <p class="section-label reveal">Troubles & problématiques</p>
+  <h2 class="section-heading reveal">Ce que la thérapie<br>peut accompagner</h2>
+  <p class="section-text reveal">Derrière chaque souffrance, chaque symptôme, il y a une histoire, une tentative de survivre, un appel silencieux. Mon travail accueille une grande diversité de problématiques.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal"><span class="card-num">01</span><h3>Anxiété & angoisses</h3><p>Crises d'angoisse, anxiété hypocondriaque, peur de mourir — des manifestations qui peuvent être transformées.</p></div>
+    <div class="service-card reveal"><span class="card-num">02</span><h3>Dépression</h3><p>Dépression essentielle, burn-out, dépression post-partum — un accompagnement profond pour retrouver l'élan vital.</p></div>
+    <div class="service-card reveal"><span class="card-num">03</span><h3>Troubles de la personnalité</h3><p>Borderline, narcissique, états limites — des fonctionnements qui peuvent évoluer grâce au travail émotionnel.</p></div>
+    <div class="service-card reveal"><span class="card-num">04</span><h3>Souffrance adolescente</h3><p>Rupture amoureuse, dépression chez les jeunes, mal-être — un accompagnement adapté à leur sensibilité.</p></div>
+    <div class="service-card reveal"><span class="card-num">05</span><h3>Maternité & parentalité</h3><p>Culpabilité maternelle, rejet du bébé, psychose puerpérale, dépression post-partum — des douleurs qui méritent d'être entendues.</p></div>
+    <div class="service-card reveal"><span class="card-num">06</span><h3>Troubles cutanés émotionnels</h3><p>Eczéma, psoriasis — quand la peau parle. Le langage de la peau et la mémoire affective sont au cœur de ce travail.</p></div>
+    <div class="service-card reveal"><span class="card-num">07</span><h3>Dépendance affective</h3><p>Auto-sabotage, répétition d'échec, peur de l'abandon — sortir des schémas répétitifs pour retrouver sa liberté.</p></div>
+    <div class="service-card reveal"><span class="card-num">08</span><h3>Relations toxiques</h3><p>Pervers narcissique, emprise, culpabilité excessive — se reconstruire après une relation destructrice.</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <p class="section-label reveal">Les séances</p>
+  <h2 class="section-heading reveal">Pour qui, comment</h2>
+  <p class="section-text reveal">Je reçois en cabinet à Paris 16ᵉ et à distance, en séances individuelles ou en groupe. La qualité d'écoute et d'engagement est la même en présentiel qu'à distance.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal"><span class="card-num">—</span><h3>Adultes</h3><p>Séances individuelles pour traverser angoisses, blocages, dépressions, et retrouver l'équilibre intérieur.</p></div>
+    <div class="service-card reveal"><span class="card-num">—</span><h3>Couples</h3><p>Un espace pour renouer le dialogue et retrouver une relation vivante.</p></div>
+    <div class="service-card reveal"><span class="card-num">—</span><h3>Adolescents & Enfants</h3><p>Un accompagnement adapté aux plus jeunes, à l'écoute de leur sensibilité.</p></div>
+    <div class="service-card reveal"><span class="card-num">—</span><h3>À distance</h3><p>Par téléphone ou visioconférence, en individuel comme en groupe.</p></div>
+  </div>
+</section>
+
+<section id="articles" style="background:var(--color-surface-warm)">
+  <p class="section-label reveal">Cas cliniques & Articles</p>
+  <h2 class="section-heading reveal">Paroles de patients,<br>éclairages cliniques</h2>
+
+  <div class="articles-grid">
+    <div class="article-card reveal"><span class="cat">Cas clinique</span><h4>Souffrance psychique chronique</h4></div>
+    <div class="article-card reveal"><span class="cat">Cas clinique</span><h4>Rupture douloureuse et peur d'abandon</h4></div>
+    <div class="article-card reveal"><span class="cat">Cas clinique</span><h4>Burn-out : le cas de Claire</h4></div>
+    <div class="article-card reveal"><span class="cat">Cas clinique</span><h4>Culpabilité identitaire et faux self</h4></div>
+    <div class="article-card reveal"><span class="cat">Concept</span><h4>L'approche affective d'E. Jalenques</h4></div>
+    <div class="article-card reveal"><span class="cat">Concept</span><h4>La fonction phorique — René Kaës</h4></div>
+    <div class="article-card reveal"><span class="cat">Concept</span><h4>Winnicott et l'espace transitionnel</h4></div>
+    <div class="article-card reveal"><span class="cat">Concept</span><h4>Le complexe de la mère morte — André Green</h4></div>
+    <div class="article-card reveal"><span class="cat">Trouble</span><h4>Trouble de la personnalité borderline</h4></div>
+    <div class="article-card reveal"><span class="cat">Trouble</span><h4>Crises d'angoisse avec peur de mourir</h4></div>
+    <div class="article-card reveal"><span class="cat">Trouble</span><h4>Dépression chez les jeunes</h4></div>
+    <div class="article-card reveal"><span class="cat">Trouble</span><h4>Eczéma atopique : le langage du corps</h4></div>
+  </div>
+</section>
+
+<div class="quote-section">
   <blockquote class="reveal">
     « Toute personne qui prend le chemin de ce travail thérapeutique, si elle veut se guérir, le peut. Le moteur du changement, c'est notre désir — le moteur même de la vie. »
     <cite>Lucie Arnulf</cite>
   </blockquote>
 </div>
 
-<section id="contact" class="contact-section">
+<section id="contact" class="contact">
   <p class="section-label reveal">Contact</p>
   <h2 class="section-heading reveal">Parlons-en</h2>
 
@@ -469,14 +527,13 @@ footer a:hover { color: var(--color-accent); }
       <div class="contact-row"><span class="label">Email</span><a href="mailto:conscience.emotionnelle@gmail.com" class="value">conscience.emotionnelle@gmail.com</a></div>
       <div class="contact-row"><span class="label">Adresse</span><span class="value">Paris 16ᵉ arrondissement</span></div>
       <div class="contact-row"><span class="label">Horaires</span><span class="value">Sur rendez-vous uniquement</span></div>
+      <div style="margin-top:24px">
+        <a href="mailto:conscience.emotionnelle@gmail.com" class="btn-primary">M'écrire →</a>
+      </div>
     </div>
 
-    <div class="contact-dark reveal">
-      <div>
-        <h3>Des modalités adaptées</h3>
-        <p>J'ai à cœur de rendre ce travail accessible, quels que soient vos moyens. Les modalités financières sont ajustées en fonction des ressources de chacun.</p>
-      </div>
-      <a href="mailto:conscience.emotionnelle@gmail.com" class="btn-primary">M'écrire →</a>
+    <div class="contact-img-wrap reveal">
+      <img src="https://raw.githubusercontent.com/notitiacorp-design/lucie-arnulf/master/Nuages%20lumineux%20et%20vagues%20de%20soie.png" alt="Nuages lumineux, vagues de soie" loading="lazy">
     </div>
   </div>
 </section>
@@ -494,7 +551,7 @@ const canvas = document.getElementById('emotionalCanvas');
 const ctx = canvas.getContext('2d');
 let W, H, scrollY = 0, targetScroll = 0;
 const particles = [];
-const NUM = 45;
+const NUM = 35;
 
 function resize() {
   W = canvas.width = window.innerWidth;
@@ -503,58 +560,46 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-// Create flowing particles
 for (let i = 0; i < NUM; i++) {
   particles.push({
     x: Math.random() * W,
     y: Math.random() * H,
-    vx: (Math.random() - 0.5) * 0.3,
-    vy: (Math.random() - 0.5) * 0.3,
-    r: 30 + Math.random() * 80,
-    hue: 15 + Math.random() * 15,
-    alpha: 0.03 + Math.random() * 0.05,
+    vx: (Math.random() - 0.5) * 0.35,
+    vy: (Math.random() - 0.5) * 0.35,
+    r: 50 + Math.random() * 120,
+    hue: 12 + Math.random() * 20,
+    alpha: 0.04 + Math.random() * 0.07,
     phase: Math.random() * Math.PI * 2
   });
 }
 
-window.addEventListener('scroll', () => {
-  targetScroll = window.scrollY;
-}, { passive: true });
+window.addEventListener('scroll', () => { targetScroll = window.scrollY; }, { passive: true });
 
 function draw() {
-  // Smooth scroll tracking
   scrollY += (targetScroll - scrollY) * 0.05;
-
   ctx.clearRect(0, 0, W, H);
 
   const t = performance.now() * 0.0003;
 
   for (const p of particles) {
-    // Organic flow — Perlin-like drift
-    const angle = Math.sin(t * 1.3 + p.phase) * 0.4 + Math.cos(t * 0.7 + p.phase) * 0.3;
-    p.vx += Math.cos(angle) * 0.02;
-    p.vy += Math.sin(angle) * 0.02;
-
-    // Gentle damping
+    const angle = Math.sin(t * 1.3 + p.phase) * 0.5 + Math.cos(t * 0.7 + p.phase) * 0.4;
+    p.vx += Math.cos(angle) * 0.025;
+    p.vy += Math.sin(angle) * 0.025;
     p.vx *= 0.995;
     p.vy *= 0.995;
-
-    // Scroll influence — particles drift upward slightly
-    p.vy -= (targetScroll - scrollY) * 0.00003;
+    p.vy -= (targetScroll - scrollY) * 0.00004;
 
     p.x += p.vx;
     p.y += p.vy;
 
-    // Wrap around
     if (p.x < -p.r) p.x = W + p.r;
     if (p.x > W + p.r) p.x = -p.r;
     if (p.y < -p.r) p.y = H + p.r;
     if (p.y > H + p.r) p.y = -p.r;
 
-    // Draw soft glowing blob
     const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-    grad.addColorStop(0, `oklch(65% 0.16 ${p.hue} / ${p.alpha * 1.6})`);
-    grad.addColorStop(0.5, `oklch(65% 0.16 ${p.hue} / ${p.alpha * 0.6})`);
+    grad.addColorStop(0, `oklch(65% 0.16 ${p.hue} / ${p.alpha * 1.8})`);
+    grad.addColorStop(0.5, `oklch(65% 0.16 ${p.hue} / ${p.alpha * 0.7})`);
     grad.addColorStop(1, `oklch(65% 0.16 ${p.hue} / 0)`);
     ctx.fillStyle = grad;
     ctx.beginPath();
@@ -569,20 +614,14 @@ draw();
 // ═══ Reveal ═══
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-in');
-      observer.unobserve(entry.target);
-    }
+    if (entry.isIntersecting) { entry.target.classList.add('is-in'); observer.unobserve(entry.target); }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ═══ Nav scroll ═══
+// ═══ Nav ═══
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
 
 // ═══ Smooth anchors ═══
 document.querySelectorAll('a[href^="#"]').forEach(a => {
